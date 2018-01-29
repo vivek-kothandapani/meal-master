@@ -1,12 +1,10 @@
-package com.apv.planner.controller;
+package com.apv.planner;
 
-import org.springframework.boot.autoconfigure.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@EnableAutoConfiguration
-public class SampleController {
+public class HomeController {
     @RequestMapping("/")
     @ResponseBody
     String home() {

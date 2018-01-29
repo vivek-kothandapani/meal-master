@@ -43,7 +43,6 @@ CREATE TABLE recipe(
  name varchar(50) NOT NULL,
  type int,
  category int,
- class int,
  country int,
  PRIMARY KEY (id)
 );
@@ -54,14 +53,13 @@ CREATE TABLE ingredient(
  name varchar(50) NOT NULL,
  type int,
  category int,
- class int,
  country int,
  PRIMARY KEY (id)
 );
 
 DROP TABLE IF EXISTS recipe_ingredient;
 CREATE TABLE recipe_ingredient(
- recipes_id int UNSIGNED NOT NULL,
+ recipe_id int UNSIGNED NOT NULL,
  ingredient_id int UNSIGNED,
  quantity int
 );
@@ -72,7 +70,6 @@ CREATE TABLE nutrient(
  name varchar(50) NOT NULL,
  type int,
  category int,
- class int,
  PRIMARY KEY (id)
 );
 
